@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Optical Music Recognition Anotation Tool</title>
-  <script defer src="main.bundle.js"></script></head>
+    <title>Optical Music Recognition Annotation Tool</title>
+  <link rel="icon" href="favicon-32x32.png"><script defer src="main.bundle.js"></script></head>
   <body>
     <noscript>
       Please enable javascript to proceed
@@ -15,71 +15,54 @@
             <button class="dropbtn">File</button>
             <div class="dropdown-content">
               <a class="upload-collection">Upload collection</a>
-              <a class="upload-yolo-anotations" title="Accepts YOLO and downloaded anotations">Upload anotations</a>
-              <a class="download-anotations">Download anotations</a>
+              <a class="upload-yolo-annotations" title="Accepts YOLO and downloaded annotations">Upload annotations</a>
+              <a class="download-annotations" title="Shortcut: Ctrl + S">Download annotations</a>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">Edit</button>
             <div class="dropdown-content">
-              <a href="#">Automatic anotation</a>
+              <a href="#">Automatic annotation</a>
               <a class="clear">Clear</a>
             </div>
           </div>
           <div class="pagination">
             Image <span class="current-image-id"></span> of <span class="total-images-count"></span>
-            <button class="previous-page">Previous</button>
+            <button class="previous-page" title="Shortcut: A">Previous</button>
             <span class="image-title"></span>
-            <button class="next-page">Next</button>
+            <button class="next-page" title="Shortcut: D">Next</button>
           </div>
         </div>
-        <!--div class="right">
-          <div class="user logged-in">
-            <span>Logged in as: </span>
-            <span class="user-email"></span>
-            <button class="logout">Logout</button>
-          </div>
-          <div class="user not-logged-in">
-            <span>Not logged in</span>
-            <button class="show-login-form">Login</button>
-          </div>
-        </div-->
       </nav>
     </header>
     <div class="editor">
       <aside class="tool-panel">
         <div class="tool-buttons">
-          <button class="cursor">Cursor</button>
-          <button class="mark">Mark</button>
-          <button class="group">Group</button>
+          <button class="cursor" title="Shortcut: C">Cursor</button>
+          <button class="mark" title="Shortcut: W">Mark</button>
+          <button class="group" title="Shortcut: G">Group</button>
         </div>
         <div class="tool-properties">
           <h3 class="tool-name">Cursor</h3>
           <div class="cursor-properties"></div>
           <div class="mark-properties">
             <label for="class">Class</label><br>
-            <select name="class" class="anotation-label-select"></select>
+            <select name="class" class="annotation-label-select"></select>
           </div>
           <div class="group-properties">
             <label for="class">Class</label><br>
             <select name="class" class="relation-label-select"></select>
           </div>
         </div>
+        <div class="object-properties">
+          <h3 class="object-name"></h3>
+          <div class="actions">
+            <button class="duplicate" title="Shortcut: Ctrl + D">Duplicate</button>
+            <button class="remove" title="Shortcut: Delete">Remove</button>
+          </div>
+        </div>
       </aside>
     </div>
     <canvas class="main-canvas"></canvas>
-    <!--div class="login-overlay" >
-      <h2>Login</h2>
-      <div class="login-modal">
-        <span>You have to login to upload/save collections and anotations to server</span>
-        <span class="error">Wrong username or password</span>
-        <label for="email">Email</label>
-        <input type="text" name="email">
-        <label for="password">Password</label>
-        <input type="password" name="password">
-        <button class="login-button primary">Submit</button>
-        <button class="cancel-button secondary">Cancel</button>
-      </div>
-    </div-->
   </body>
 </html>
